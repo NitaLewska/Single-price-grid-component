@@ -1,10 +1,12 @@
 body {
-    width: 98vw;
+    width: 100vw;
+    max-width: 1440px;
     background-color: #e6eff6;
     display: flex;
     height: 98vh;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .price_grid_component {
@@ -14,6 +16,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
+    margin-top: 50px;
     box-shadow: 3px 5px 58px -11px rgba(0,0,0,0.30);
     border-radius:10px;
     font-family: 'Karla', sans-serif;
@@ -97,7 +100,36 @@ body {
 .price_grid_component p{
     margin: auto;
 }
-
 footer {
-    padding: 10vw;
+    margin: 50px 100px 50px 100px;
+}
+
+@media (max-width: 600px) {
+    
+    body{
+        justify-content: space-evenly;
+    }
+    .price_grid_component {
+        grid-template-columns: 1fr;
+        width: 350px;
+        height: auto;
+    }
+    .price_grid_component section:nth-of-type(1) {
+        grid-column: 1/2;
+    }
+    .price_grid_component section:nth-of-type(2) {
+        border-radius: 0px;
+    }
+    .price_grid_component section:nth-of-type(2) button{
+        margin: 1em 0 0 0;
+        width: 250px;
+        height: 50px;
+    }
+    .price_grid_component section:nth-of-type(3) {
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    footer{
+        margin-top: 50px;
+    }
 }
