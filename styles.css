@@ -5,6 +5,7 @@ body {
     display: flex;
     height: 98vh;
     align-items: center;
+    justify-content: space-around;
 }
 
 .price_grid_component {
@@ -99,6 +100,5 @@ body {
 }
 
 footer {
-
-    bottom: 0;
+    margin: 15%;
 }
